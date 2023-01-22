@@ -1,0 +1,19 @@
+{% extends 'base.html' %} 
+
+{% block content %} 
+
+{% if current_user.is_authenticated %}
+<h1>Greetings {{ current_user.username }}!</h1>
+{% else %}
+<h1>Kindly sign up to use our website</h1>
+{% endif %}
+<h1 class="mb-2">Welcome to the community garden inventory app!</h1>
+
+<img src="{{ url_for('static', filename='img/Cover.png') }}" alt="home page image of two people gardening">
+
+
+
+
+
+
+{% endblock content %}
